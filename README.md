@@ -1,9 +1,7 @@
 # CyberForgeCamp
 Hands-on cybersecurity training camp: labs, CTFs, and red team ops for skill-forging.
 
-<div align="center">
-  [🇨🇳 中文](./README.md) | [🇬🇧 English](./README[EN].md)
-</div>
+🇨🇳 中文 | [🇬🇧 English](README_EN.md)
 
 ---
 

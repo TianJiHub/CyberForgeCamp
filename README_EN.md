@@ -1,5 +1,11 @@
 # 🛡️ Cybersecurity Training Repository
 
+Hands-on cybersecurity training camp: labs, CTFs, and red team ops for skill-forging.
+
+🇬🇧 English | [🇨🇳 中文](README.md)
+
+---
+
 <div align="center">
   
 ![Security Banner](https://img.shields.io/badge/Red%20Team-Cyber%20Security-red?style=for-the-badge&logo=kalilinux)
