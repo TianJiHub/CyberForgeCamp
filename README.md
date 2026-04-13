@@ -38,20 +38,23 @@ Hands-on cybersecurity training camp: labs, CTFs, and red team ops for skill-for
 
 > **⚠️ 重要**：目录按技能分类，但建议按以下顺序学习，避免跳跃造成基础不牢。
 
-| 阶段 | 学习内容 | 对应目录 |
-| :---: | :--- | :--- |
-| 0️⃣ | **环境配置 + 网络安全介绍** | `00-Basics/Environment_Setup/`<br>`00-Basics/Security_Intro.md` |
-| 1️⃣ | **Linux基础命令与脚本** | `00-Basics/Linux/` |
-| 2️⃣ | **计算机网络基础（TCP/IP、Wireshark）** | `00-Basics/Network/` |
-| 3️⃣ | **Python安全编程** | `00-Basics/Python/` |
-| 4️⃣ | **Web前后端基础（HTML/JS/PHP）** | `00-Basics/HTML/`、`JavaScript/`、`PHP/` |
-| 5️⃣ | **数据库安全基础（MySQL）** | `00-Basics/MySQL/` |
-| 6️⃣ | **密码学基础** | `00-Basics/Crypto/` |
-| 7️⃣ | **CTF入门（Web、Misc）** | `01-CTF/Web/`、`01-CTF/Misc/` |
-| 8️⃣ | **CTF进阶（Pwn、Reverse、Crypto）** | `01-CTF/Pwn/`、`Reverse/`、`Crypto/` |
-| 9️⃣ | **红队基础（信息收集、漏洞扫描）** | `02-RedTeam/Recon/`、`Exploit/` |
-| 🔟 | **红队高阶（内网、免杀）** | `02-RedTeam/Lateral/`、`Evasion/` |
-| 🧪 | **实战靶场 & CTF真题** | `03-Labs/`、`05-Contest/` |
+| 阶段 | 学习内容 | 对应目录                                        |
+| :---: | :--- |:--------------------------------------------|
+| 0️⃣ | **环境配置** | `00-Basics/00-Environment_Setup/`           |
+| 1️⃣ | **网络安全介绍** | `00-Basics/01-Security_Intro/`              |
+| 2️⃣ | **Linux基础命令与脚本** | `00-Basics/02-Linux/`                       |
+| 3️⃣ | **计算机网络基础（TCP/IP、Wireshark）** | `00-Basics/03-Network/`                     |
+| 4️⃣ | **Python安全编程** | `00-Basics/04-Python/`                      |
+| 5️⃣ | **Web前端基础（HTML）** | `00-Basics/05-HTML/`                        |
+| 6️⃣ | **Web前端基础（JavaScript）** | `00-Basics/06-JavaScript/`                  |
+| 7️⃣ | **Web后端基础（PHP）** | `00-Basics/07-PHP/`                         |
+| 8️⃣ | **数据库安全基础（MySQL）** | `00-Basics/08-MySQL/`                       |
+| 9️⃣ | **密码学基础** | `00-Basics/09-Crypto/`                      |
+| 🔟 | **CTF入门（Web、Misc）** | `01-CTF/01-Web/`、`01-CTF/02-Misc/`          |
+| 1️⃣1️⃣ | **CTF进阶（Pwn、Reverse、Crypto）** | `01-CTF/03-Pwn/`、`04-Reverse/`、`05-Crypto/` |
+| 1️⃣2️⃣ | **红队基础（信息收集、漏洞扫描）** | `02-RedTeam/01-Recon/`、`02-Exploit/`        |
+| 1️⃣3️⃣ | **红队高阶（内网、免杀）** | `02-RedTeam/03-Lateral/`、`04-Evasion/`      |
+| 1️⃣4️⃣ | **实战靶场 & CTF真题** | `03-Labs/`、`05-Contest/`                    |
 
 > 💡 可根据自身基础跳过某些阶段，但建议至少完成阶段0~3后再挑战CTF或红队内容。
 
@@ -111,38 +114,44 @@ cd CyberForgeCamp
 ## 🗂️ 目录结构
 
 ```text
-cyber-training/
-├── 00-Basics/                      # 基础技能
-│   ├── Linux/                      # Linux命令、权限、脚本
-│   ├── Network/                    # TCP/IP、Wireshark分析
-│   ├── Crypto/                     # 古典密码、对称/非对称加密
-│   ├── Python/                     # 安全脚本编写
-│   ├── HTML/                       # HTML安全（XSS、DOM Clobbering、CSP绕过）
-│   ├── JavaScript/                 # JavaScript安全（原型链污染、XSS Payload、CSRF）
-│   ├── PHP/                        # PHP安全（文件包含、反序列化、RCE、WebShell）
-│   ├── MySQL/                      # MySQL安全（SQL注入、权限提升、UDF）
-│   ├── Security_Intro.md           # 网络安全介绍（威胁模型、攻击面、法律法规）
-│   └── Environment_Setup/          # 环境配置（Kali/Docker/Burp/IDA/IDE配置指南）
-├── 01-CTF/                         # CTF竞赛专题
-│   ├── Web/                        # SQLi、XSS、SSRF、RCE
-│   ├── Pwn/                        # 栈溢出、堆利用、格式化字符串
-│   ├── Reverse/                    # IDA、Ghidra、反混淆
-│   ├── Crypto/                     # 现代密码、侧信道
-│   └── Misc/                       # 取证、流量、隐写
-├── 02-RedTeam/                     # 红队渗透测试
-│   ├── Recon/                      # 信息收集(主动/被动)
-│   ├── Exploit/                    # 漏洞利用与武器化
-│   ├── Lateral/                    # 横向移动与权限维持
-│   └── Evasion/                    # 免杀与绕过
-├── 03-Labs/                        # 实战靶场
-│   ├── VulnHub/                    # 精选VulnHub靶机Writeup
-│   ├── HTB/                        # HackTheBox退役机攻略
-│   └── Internal/                   # 校内自建靶场
-├── 04-Resources/                   # 学习资源
-│   ├── Books/                      # 推荐PDF书籍
-│   ├── Tools/                      # 工具清单与配置
-│   └── Cheatsheets/                # 常用命令速查表
-└── 05-Contest/                     # 历年CTF真题 & 竞赛复盘
+CyberForgeCamp/
+├── 00-Basics/                          # 基础技能（按推荐顺序编号）
+│   ├── README.md                        # 基础技能总览
+│   ├── 00-Environment_Setup/            # 环境配置（Kali/Docker/Burp/IDA/IDE）
+│   ├── 01-Security_Intro/               # 网络安全介绍（威胁模型、攻击面、法律法规）
+│   ├── 02-Linux/                        # Linux命令、权限、脚本
+│   ├── 03-Network/                      # TCP/IP、Wireshark分析
+│   ├── 04-Python/                       # Python安全编程（requests、scapy、pwntools）
+│   ├── 05-HTML/                         # HTML安全（XSS、DOM Clobbering、CSP绕过）
+│   ├── 06-JavaScript/                   # JavaScript安全（原型链污染、XSS Payload、CSRF）
+│   ├── 07-PHP/                          # PHP安全（文件包含、反序列化、RCE、WebShell）
+│   ├── 08-MySQL/                        # MySQL安全（SQL注入、权限提升、UDF）
+│   └── 09-Crypto/                       # 古典密码、对称/非对称加密、哈希函数
+├── 01-CTF/                             # CTF竞赛专题
+│   ├── README.md                        # CTF总览
+│   ├── 01-Web/                          # SQLi、XSS、SSRF、RCE
+│   ├── 02-Misc/                         # 取证、流量、隐写
+│   ├── 03-Pwn/                          # 栈溢出、堆利用、格式化字符串
+│   ├── 04-Reverse/                      # IDA、Ghidra、反混淆
+│   └── 05-Crypto/                       # 现代密码、侧信道
+├── 02-RedTeam/                         # 红队渗透测试
+│   ├── README.md                        # 红队总览
+│   ├── 01-Recon/                        # 信息收集（主动/被动）
+│   ├── 02-Exploit/                      # 漏洞利用与武器化（MSF/Cobalt Strike）
+│   ├── 03-Lateral/                      # 横向移动与权限维持
+│   └── 04-Evasion/                      # 免杀与绕过（AV/EDR）
+├── 03-Labs/                            # 实战靶场
+│   ├── README.md                        # 实战靶场总览
+│   ├── 01-VulnHub/                      # 精选VulnHub靶机Writeup
+│   ├── 02-HTB/                          # HackTheBox退役机攻略
+│   └── 03-Internal/                     # 校内自建靶场
+├── 04-Resources/                       # 学习资源
+│   ├── README.md                        # 学习资源总览
+│   ├── 01-Books/                        # 推荐PDF书籍
+│   ├── 02-Tools/                        # 工具清单与配置
+│   └── 03-Cheatsheets/                  # 常用命令速查表
+└── 05-Contest/                         # 历年CTF真题 & 竞赛复盘
+    └──  README.md                       # 竞赛真题总览
 ```
 
 ---
